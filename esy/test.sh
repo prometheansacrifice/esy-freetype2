@@ -8,7 +8,7 @@ if which x86_64-w64-mingw32-gcc; then
     CCLIB=
 else
     CC=gcc
-    CCLIB=-lbz2 -lpng -lz
+    CCLIB="-lbz2 -lpng -lz"
 fi
 
 echo "Using compiler: $CC"
