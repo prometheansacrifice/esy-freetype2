@@ -331,7 +331,7 @@
   cf2_hintmap_map( CF2_HintMap  hintmap,
                    CF2_Fixed    csCoord )
   {
-    if ( hintmap->count == 0 || ! hintmap->hinted )
+    if ( hintmap->count == 0 || !hintmap->hinted )
     {
       /* there are no hints; use uniform scale and zero offset */
       return FT_MulFix( csCoord, hintmap->scale );
@@ -1212,7 +1212,7 @@
      * (`u').
      *
      * See notation in
-     * http://softsurfer.com/Archive/algorithm_0104/algorithm_0104B.htm.
+     * http://geomalgorithms.com/a05-_intersect-1.html.
      * Calculations are done in 16.16, but must handle the squaring of
      * line lengths in character space.  We scale all vectors by 1/32 to
      * avoid overflow.  This allows values up to 4095 to be squared.  The

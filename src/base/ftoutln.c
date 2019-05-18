@@ -4,7 +4,7 @@
  *
  *   FreeType outline management (body).
  *
- * Copyright 1996-2018 by
+ * Copyright (C) 1996-2019 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -1076,7 +1076,8 @@
         v_cur.y = points[n].y >> yshift;
 
         area = ADD_LONG( area,
-                         ( v_cur.y - v_prev.y ) * ( v_cur.x + v_prev.x ) );
+                         MUL_LONG( v_cur.y - v_prev.y,
+                                   v_cur.x + v_prev.x ) );
 
         v_prev = v_cur;
       }

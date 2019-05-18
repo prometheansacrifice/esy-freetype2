@@ -4,7 +4,7 @@
  *
  *   Type 1 Glyph Loader (body).
  *
- * Copyright 1996-2018 by
+ * Copyright (C) 1996-2019 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -545,7 +545,7 @@
 
 
           /* First of all, scale the points, if we are not hinting */
-          if ( !hinting || ! decoder.builder.hints_funcs )
+          if ( !hinting || !decoder.builder.hints_funcs )
             for ( n = cur->n_points; n > 0; n--, vec++ )
             {
               vec->x = FT_MulFix( vec->x, x_scale );

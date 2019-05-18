@@ -1,29 +1,30 @@
 {
-  "name": "esy-freetype2",
-  "version": "2.9.1006",
-  "description": "Mirror of freetype2",
-  "license": "MIT",
+  "name": "esy-freetype-2.10.0",
+  "version": "0.0.000",
+  "description": "freetype-2.10.0 packaged for esy",
   "esy": {
-    "build": [
-        ["bash", "-c", "#{os == 'windows' ? './esy/configure-windows.sh' : './esy/configure.sh'}"],
-        ["./esy/build.sh"]
-    ],
-    "buildsInSource": "_build",
+    "buildsInSource": true,
     "exportedEnv": {
-        "FREETYPE2_INCLUDE_PATH": {
-            "val": "#{self.install / 'include' / 'freetype2'}",
-            "scope": "global"
-        },
-        "FREETYPE2_LIB_PATH": {
-            "val": "#{self.lib}",
-            "scope": "global"
-        }
-    }
+      "PKG_CONFIG_PATH": {
+        "scope": "global",
+        "val": "#{self.lib / 'pkgconfig' :  }"
+      }
+    },
+    "build": [
+      ["chmod", "755", "./configure"],
+      ["bash", "-c", "#{os == 'windows' ? './configure --prefix=$cur__install --host x86_64-w64-mingw32' : './configure --prefix=$cur__install'}"],
+      ["make"],
+      ["make", "install"]
+    ]
   },
   "dependencies": {
-      "esy-cmake": "^0.3.2"
+    "esy-zlib": "esy-packages/esy-zlib#404929fd8b7ed83ed6a528d751840faff957b4b3",
+    "esy-libpng": "esy-packages/esy-libpng#d846df4a8547b3299c7627773008bd97543d7048",
+    "esy-harfbuzz": "esy-packages/esy-harfbuzz#4c8e602a063b10d6b81e3c7cc68cb53f1976470c",
+    "esy-bzip2": "esy-packages/esy-bzip2#48cb318402fb7ebc41bda9acac1a592919f44cf7",
+    "esy-python": "esy-packages/esy-python#61d8c1a8a1e6ad6e73991e20ba0570e5c60ff1da"
   },
-  "devDependencies": {
-      "esy-cmake": "^0.3.2"
+  "resolutions": {
+    "esy-zlib": "esy-packages/esy-zlib#404929fd8b7ed83ed6a528d751840faff957b4b3"
   }
 }

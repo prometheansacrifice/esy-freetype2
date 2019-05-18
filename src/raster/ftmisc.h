@@ -5,7 +5,7 @@
  *   Miscellaneous macros for stand-alone rasterizer (specification
  *   only).
  *
- * Copyright 2005-2018 by
+ * Copyright (C) 2005-2019 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used
@@ -59,14 +59,14 @@
   typedef struct FT_MemoryRec_*  FT_Memory;
 
   typedef void* (*FT_Alloc_Func)( FT_Memory  memory,
-                                  size_t     size );
+                                  long       size );
 
   typedef void (*FT_Free_Func)( FT_Memory  memory,
                                 void*      block );
 
   typedef void* (*FT_Realloc_Func)( FT_Memory  memory,
-                                    size_t     cur_size,
-                                    size_t     new_size,
+                                    long       cur_size,
+                                    long       new_size,
                                     void*      block );
 
   typedef struct FT_MemoryRec_

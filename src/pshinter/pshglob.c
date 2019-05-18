@@ -5,7 +5,7 @@
  *   PostScript hinter global hinting management (body).
  *   Inspired by the new auto-hinter module.
  *
- * Copyright 2001-2018 by
+ * Copyright (C) 2001-2019 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used
@@ -591,7 +591,7 @@
 
     for ( ; count > 0; count--, zone-- )
     {
-      delta = zone->org_top - stem_bot;
+      delta = SUB_LONG( zone->org_top, stem_bot );
       if ( delta < -blues->blue_fuzz )
         break;
 
