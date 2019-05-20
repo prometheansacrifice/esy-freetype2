@@ -18,8 +18,9 @@ jobs:
       displayName: 'Install esy'
   - script: esy install
     displayName: 'esy install'
+  - ${{ if ne(parameters.host, 'Windows') }}:
+    - script: esy x pkg-config --libs freetype2
+      displayName: 'Checking library'
   - ${{ if eq(parameters.host, 'Windows') }}:
-    - script: esy b bash .ci/pkg-config-cygwin.sh
-      displayName: 'Installing pkg-config in cygwin'
-  - script: 'esy x pkg-config --libs freetype-2.10.0'
-    displayName: 'Checking library...'
+    - script: 'esy b --install'
+      displayName: 'Building'
