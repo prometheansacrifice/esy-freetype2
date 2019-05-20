@@ -19,7 +19,7 @@
       [
         "bash",
         "-c",
-        "#{os == 'windows' ? './configure --enable-shared=no --prefix=$cur__install --host x86_64-w64-mingw32' : './configure --enable-shared=no --prefix=$cur__install'}"
+        "./configure --prefix=#{self.install} #{os == 'windows' ? '--host x86_64-w64-mingw32' : ''}"
       ],
       [
         "make"
