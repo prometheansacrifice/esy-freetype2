@@ -1,5 +1,5 @@
 {
-  "checksum": "36e32d197423363f1b5f534588f6a647",
+  "checksum": "a270617222033b605a88b95757f1cbaf",
   "root": "esy-freetype-2.10.0@link-dev:./package.json",
   "node": {
     "esy-zlib@github:esy-packages/esy-zlib#404929fd8b7ed83ed6a528d751840faff957b4b3@d41d8cd9": {
@@ -102,7 +102,7 @@
         "esy-python@github:esy-packages/esy-python#61d8c1a8a1e6ad6e73991e20ba0570e5c60ff1da@d41d8cd9",
         "esy-libpng@github:esy-packages/esy-libpng#d846df4a8547b3299c7627773008bd97543d7048@d41d8cd9",
         "esy-harfbuzz@github:esy-packages/esy-harfbuzz#4c8e602a063b10d6b81e3c7cc68cb53f1976470c@d41d8cd9",
-        "esy-bzip2@github:esy-packages/esy-bzip2#48cb318402fb7ebc41bda9acac1a592919f44cf7@d41d8cd9"
+        "esy-bzip2@github:esy-packages/esy-bzip2#048f314334ae2e63b24082a7e4cfca4985b04028@d41d8cd9"
       ],
       "devDependencies": []
     },
@@ -120,16 +120,16 @@
       "dependencies": [],
       "devDependencies": []
     },
-    "esy-bzip2@github:esy-packages/esy-bzip2#48cb318402fb7ebc41bda9acac1a592919f44cf7@d41d8cd9": {
+    "esy-bzip2@github:esy-packages/esy-bzip2#048f314334ae2e63b24082a7e4cfca4985b04028@d41d8cd9": {
       "id":
-        "esy-bzip2@github:esy-packages/esy-bzip2#48cb318402fb7ebc41bda9acac1a592919f44cf7@d41d8cd9",
+        "esy-bzip2@github:esy-packages/esy-bzip2#048f314334ae2e63b24082a7e4cfca4985b04028@d41d8cd9",
       "name": "esy-bzip2",
       "version":
-        "github:esy-packages/esy-bzip2#48cb318402fb7ebc41bda9acac1a592919f44cf7",
+        "github:esy-packages/esy-bzip2#048f314334ae2e63b24082a7e4cfca4985b04028",
       "source": {
         "type": "install",
         "source": [
-          "github:esy-packages/esy-bzip2#48cb318402fb7ebc41bda9acac1a592919f44cf7"
+          "github:esy-packages/esy-bzip2#048f314334ae2e63b24082a7e4cfca4985b04028"
         ]
       },
       "overrides": [],
