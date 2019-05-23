@@ -1,6 +1,6 @@
 # CMakeLists.txt
 #
-# Copyright 2013-2018 by
+# Copyright (C) 2013-2019 by
 # David Turner, Robert Wilhelm, and Werner Lemberg.
 #
 # Written originally by John Cary <cary@txcorp.com>
@@ -134,8 +134,8 @@ endif ()
 project(freetype C)
 
 set(VERSION_MAJOR "2")
-set(VERSION_MINOR "9")
-set(VERSION_PATCH "1")
+set(VERSION_MINOR "10")
+set(VERSION_PATCH "0")
 
 # SOVERSION scheme: CURRENT.AGE.REVISION
 #   If there was an incompatible interface change:
@@ -469,6 +469,7 @@ if (NOT SKIP_INSTALL_LIBRARIES AND NOT SKIP_INSTALL_ALL)
       EXPORT freetype-targets
       LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
       ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+      RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
       FRAMEWORK DESTINATION Library/Frameworks
       COMPONENT libraries)
   install(

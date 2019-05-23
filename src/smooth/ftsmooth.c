@@ -4,7 +4,7 @@
  *
  *   Anti-aliasing renderer interface (body).
  *
- * Copyright 2000-2018 by
+ * Copyright (C) 2000-2019 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -43,6 +43,10 @@
     sub[1].y = 0;
     sub[2].x = 21;
     sub[2].y = 0;
+
+#elif 0   /* or else, once ClearType patents expire */
+
+    FT_Library_SetLcdFilter( render->root.library, FT_LCD_FILTER_DEFAULT );
 
 #endif
 

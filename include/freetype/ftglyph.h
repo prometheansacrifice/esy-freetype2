@@ -4,7 +4,7 @@
  *
  *   FreeType convenience functions to handle glyphs (specification).
  *
- * Copyright 1996-2018 by
+ * Copyright (C) 1996-2019 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -59,8 +59,9 @@ FT_BEGIN_HEADER
    *
    * @description:
    *   This section contains definitions used to manage glyph data through
-   *   generic FT_Glyph objects.  Each of them can contain a bitmap, a vector
-   *   outline, or even images in other formats.
+   *   generic @FT_Glyph objects.  Each of them can contain a bitmap,
+   *   a vector outline, or even images in other formats.  These objects are
+   *   detached from @FT_Face, contrary to @FT_GlyphSlot.
    *
    */
 
@@ -532,7 +533,7 @@ FT_BEGIN_HEADER
    *     FT_Done_Glyph( glyph );
    *   ```
    *
-   *   Here another example, again without error handling:
+   *   Here is another example, again without error handling:
    *
    *   ```
    *     FT_Glyph  glyphs[MAX_GLYPHS]

@@ -4,7 +4,7 @@
  *
  *   FreeType low-level system interface definition (specification).
  *
- * Copyright 1996-2018 by
+ * Copyright (C) 1996-2019 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -21,7 +21,6 @@
 
 
 #include <ft2build.h>
-#include FT_TYPES_H
 
 
 FT_BEGIN_HEADER
@@ -87,7 +86,7 @@ FT_BEGIN_HEADER
    */
   typedef void*
   (*FT_Alloc_Func)( FT_Memory  memory,
-                    size_t     size );
+                    long       size );
 
 
   /**************************************************************************
@@ -141,8 +140,8 @@ FT_BEGIN_HEADER
    */
   typedef void*
   (*FT_Realloc_Func)( FT_Memory  memory,
-                      size_t     cur_size,
-                      size_t     new_size,
+                      long       cur_size,
+                      long       new_size,
                       void*      block );
 
 
@@ -282,7 +281,7 @@ FT_BEGIN_HEADER
    * @input:
    *   base ::
    *     For memory-based streams, this is the address of the first stream
-   *     byte in memory.  This field should always be set to NULL for
+   *     byte in memory.  This field should always be set to `NULL` for
    *     disk-based streams.
    *
    *   size ::

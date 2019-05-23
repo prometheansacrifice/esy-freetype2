@@ -4,7 +4,7 @@
 /*                                                                         */
 /*    Unix-specific FreeType low-level system interface (body).            */
 /*                                                                         */
-/*  Copyright 1996-2018 by                                                 */
+/*  Copyright (C) 1996-2019 by                                             */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */
@@ -95,7 +95,7 @@
   /*                                                                       */
   FT_CALLBACK_DEF( void* )
   ft_alloc( FT_Memory  memory,
-            size_t     size )
+            long       size )
   {
     FT_UNUSED( memory );
 
@@ -125,8 +125,8 @@
   /*                                                                       */
   FT_CALLBACK_DEF( void* )
   ft_realloc( FT_Memory  memory,
-              size_t     cur_size,
-              size_t     new_size,
+              long       cur_size,
+              long       new_size,
               void*      block )
   {
     FT_UNUSED( memory );
